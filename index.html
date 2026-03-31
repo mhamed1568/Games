@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta name="google-site-verification" content="YfLFHcnbbgrXzEdkJQGwuFm0f4sFAoCynQTUHqm2iuo" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohammed | Software Engineer & MK Patches</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Special+Elite&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css" />
-    <title>MK Patches - Game Modifications</title>
 </head>
 <body>
-    <canvas id="particlesCanvas"></canvas>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
     <div class="glitch-overlay">
         <div class="scanlines"></div>
         <div class="glitch-slice"></div>
@@ -21,39 +23,360 @@
         <div class="flicker-line"></div>
         <div class="vhs-tracking"></div>
     </div>
+    
+    <!-- Navbar -->
+    <header id="navbar">
+        <a href="#home" class="logo">MK<span>.</span></a>
+        
+        <div class="nav-right">
+            <button id="langToggle" class="lang-btn">AR</button>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#home" class="active" data-t="nav-home">Home</a></li>
+            <li><a href="#about" data-t="nav-about">About</a></li>
+            <li><a href="#portfolio" data-t="nav-portfolio">Portfolio</a></li>
+            <li><a href="#timeline" data-t="nav-timeline">Timeline</a></li>
+            <li><a href="#works" data-t="nav-works">Works</a></li>
+            <li><a href="#contact" data-t="nav-contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Canvas Background -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- Home Tab -->
+    <section id="home">
+        <div class="container hero-content reveal">
+            <div class="hero-text">
+                <h2 class="text-accent" data-t="hero-greeting">Hello User,</h2>
+                <h1 data-t="hero-name">I'm <span class="title-glow">Mohammed</span></h1>
+                <h2 data-t="hero-title">Software Engineer & Game Patcher</h2>
+                <div class="btn-group">
+                    <a href="#works" class="btn btn-filled" data-t="btn-explore">Explore Works</a>
+                    <a href="assets/CV.pdf" class="btn" download data-t="btn-cv">Download CV</a>
+                </div>
+                
+                <div class="tips-box glass-card" style="margin-top: 3rem; padding: 1.8rem; border-left: 4px solid var(--accent); background: rgba(0,0,0,0.6);">
+                    <h3 data-t="tips-title" class="text-accent" style="margin-bottom: 1rem; font-size: 1.5rem;">Tips & Rules</h3>
+                    <ul dir="auto" style="list-style-position: inside; color: var(--text-primary); font-size: 1.2rem; line-height: 1.8; text-align: start;">
+                        <li data-t="tip-1">First: Make sure to read the description fully before downloading.</li>
+                        <li data-t="tip-2">Second: All uploaded files are scanned and virus-free.</li>
+                        <li data-t="tip-3">Tip: Watch the tutorial video to ensure correct installation.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="v.png" alt="Mohammed Avatar" class="hero-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Tab -->
+    <section id="about">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 data-t="about-title">About <span class="text-accent">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <img src="Gemini.png" alt="Developer Life" class="about-img" loading="lazy">
+                <div class="about-text">
+                    <p data-t="about-p1">Hey there, I'm Mohammed! Welcome to my personal space on the web.</p>
+                    <p data-t="about-p2">I am a passionate software engineer who strongly believes in writing clean, scalable, and efficient code. I specialize in building solid web experiences and deeply technical applications.</p>
+                    <p data-t="about-p3">Outside of the core development world, I am known as MK, modifying games, building patches, and providing top-tier optimized game downloads for the community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container reveal">
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3 class="stat-number" data-target="2">0</h3>
+                    <p data-t="stats-exp">Years Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h3 class="stat-number" data-target="15">0</h3>
+                    <p data-t="stats-games">Games & Patches</p>
+                </div>
+                <div class="stat-box">
+                    <h3 class="stat-number" data-target="4">0</h3>
+                    <p data-t="stats-tech">Core Tech Skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio & Skills Tab -->
+    <section id="portfolio">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 data-t="tech-title">Tech <span class="text-accent">Arsenal</span></h2>
+            </div>
+            <div class="skills-container">
+                <div class="glass-card">
+                    <h3 data-t="tech-front">Frontend Engineering</h3>
+                    <p data-t="tech-front-desc">Crafting sleek, interactive, and highly responsive user interfaces that perform blazing fast on any device.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                        <span class="skill-tag">JavaScript / TS</span>
+                        <span class="skill-tag">React.js</span>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <h3 data-t="tech-back">Backend Architecture</h3>
+                    <p data-t="tech-back-desc">Designing secure, robust, and lightning-fast APIs with modern server-side technologies and databases.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL / NoSQL</span>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <h3 data-t="tech-game">Game Modding & Patching</h3>
+                    <p data-t="tech-game-desc">Deep diving into game files, creating custom patches (like FIFA 14), and optimizing game setups for the community.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Reverse Engineering</span>
+                        <span class="skill-tag">Memory Editing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Tab -->
+    <section id="timeline">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 data-t="timeline-title">Latest <span class="text-accent">Updates</span></h2>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h4 data-t="tl-1-date">March 2026</h4>
+                        <h3 data-t="tl-1-title" class="text-accent">FIFA 14 Patch V3 Release</h3>
+                        <p data-t="tl-1-desc">Major update adding 5 new teams, enhanced graphics, and updated rosters for the current season.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h4 data-t="tl-2-date">January 2026</h4>
+                        <h3 data-t="tl-2-title" class="text-accent">Resident Evil 6 Mod Pack</h3>
+                        <p data-t="tl-2-desc">Complete overhaul mod pack enhancing textures and adding classic horror mechanics to the game.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h4 data-t="tl-3-date">November 2025</h4>
+                        <h3 data-t="tl-3-title" class="text-accent">Site V1 Launch</h3>
+                        <p data-t="tl-3-desc">The original launch of MK Patches website to share creations with the gaming community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Tab -->
+    <section id="works">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 data-t="works-title">My <span class="text-accent">Works</span></h2>
+            </div>
+            
+            <!-- Filters & Search -->
+            <div class="filter-container">
+                <input type="text" id="gameSearch" data-p="search-ph" placeholder="Search games or patches..." class="search-input" />
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all" data-t="filter-all">All</button>
+                    <button class="filter-btn" data-filter="pc" data-t="filter-pc">PC Games</button>
+                    <button class="filter-btn" data-filter="android" data-t="filter-android">Android</button>
+                    <button class="filter-btn" data-filter="patch" data-t="filter-patch">Patches</button>
+                </div>
+            </div>
+
+            <div class="works-grid">
+                <!-- Data IDs map to main.js gamesDb object -->
+                <div class="work-item" data-id="g_fifa" data-category="patch">
+                    <div class="work-img-wrapper"><img src="downloa.jpg" alt="FIFA 14 patch" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>FIFA 14 Patch Download</p></div>
+                </div>
+                
+                <div class="work-item" data-id="g_tut" data-category="patch">
+                    <div class="work-img-wrapper"><img src="download.jpg" alt="watch patch tutorial" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Patch Tutorial Video</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_cm15" data-category="patch">
+                    <div class="work-img-wrapper"><img src="images.jpg" alt="Creation Master 15" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Creation Master 15</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_re6" data-category="pc">
+                    <div class="work-img-wrapper"><img src="koussai.jpg" alt="Resident Evil 6" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Resident Evil 6 PC</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_mcpc" data-category="pc">
+                    <div class="work-img-wrapper"><img src="mama.jpg" alt="Minecraft Java" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Minecraft Java PC</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_hkpc" data-category="pc">
+                    <div class="work-img-wrapper"><img src="appa.jpg" alt="Hollow Knight PC" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Hollow Knight PC</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_gtapc" data-category="pc">
+                    <div class="work-img-wrapper"><img src="baba.jpg" alt="GTA SA PC" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>GTA San Andreas PC</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_gtaan" data-category="android">
+                    <div class="work-img-wrapper"><img src="aaaa.jpg" alt="GTA San Andreas Android" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>GTA San Andreas Android</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_mcan" data-category="android">
+                    <div class="work-img-wrapper"><img src="apps.58378.14492077886571533.338a563a-86e7-47b1-b9dc-41cf411f5dcd.jpg" alt="Minecraft Android" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Minecraft Android</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_cup" data-category="pc">
+                    <div class="work-img-wrapper"><img src="head.png" alt="Cuphead PC" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Cuphead PC</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_forza" data-category="pc">
+                    <div class="work-img-wrapper"><img src="forza.jpg" alt="Forza Horizon 5 PC" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Forza Horizon 5 PC</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_dc" data-category="android">
+                    <div class="work-img-wrapper"><img src="cells.jpg" alt="Dead Cells Android" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Dead Cells Android</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_re4" data-category="pc">
+                    <div class="work-img-wrapper"><img src="evl 4.jpg" alt="Resident Evil 4" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Resident Evil 4 PC</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_hkan" data-category="android">
+                    <div class="work-img-wrapper"><img src="knight.jpg" alt="Hollow Knight Android" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>Hollow Knight Android</p></div>
+                </div>
+
+                <div class="work-item" data-id="g_jojo" data-category="pc">
+                    <div class="work-img-wrapper"><img src="kok.jpg" alt="JoJo Bizarre Adventure" class="work-img" loading="lazy"></div>
+                    <div class="work-info"><p>JoJo's Bizarre Adventure</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Tab -->
+    <section id="contact">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 data-t="contact-title">Get in <span class="text-accent">Touch</span></h2>
+            </div>
+            <div class="contact-wrapper">
+                <!-- Formspree Contact Form -->
+                <form action="https://formspree.io/f/xyz" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" data-p="form-name" required />
+                    <input type="email" name="email" placeholder="Your Email" data-p="form-email" required />
+                    <textarea name="message" rows="5" placeholder="Your Message" data-p="form-msg" required></textarea>
+                    <button type="submit" class="btn btn-filled form-btn" data-t="btn-send">Send Message</button>
+                    <!-- Small instruction for the user to replace xyz with their formspree ID -->
+                    <p class="form-hint" style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 10px;">Developer: Replace "xyz" in form action with your real Formspree ID.</p>
+                </form>
+
+                <div class="contact-cards" style="margin-top: 2rem; width: 100%;">
+                    <a href="tel:+0541675366" class="contact-card">
+                        <img src="assets/svg/phone.svg" alt="Phone" style="filter: invert(1);">
+                        <span dir="ltr" style="font-family: 'Inter', sans-serif;">+0541675366</span>
+                    </a>
+                    <a href="mailto:zzzzzzzz3129@gmail.com" class="contact-card">
+                        <img src="assets/svg/Email.svg" alt="Email" style="filter: invert(1);">
+                        <span>zzzzzzzz3129@gmail.com</span>
+                    </a>
+                    <a href="https://www.instagram.com/mk_99_99_99/" target="_blank" class="contact-card">
+                        <img src="instagrame.png" alt="Instagram" style="width: 30px; height: 30px; filter: none;">
+                        <span dir="ltr">@mk_99_99_99</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-t="footer-text">[ Built by Mohammed ]</p>
+    </footer>
+
+    <!-- Scroll To Top Progress Button -->
+    <div class="scroll-top-btn" id="scrollTopBtn">
+        <svg class="progress-ring" width="50" height="50">
+            <circle class="progress-ring-circle" stroke="var(--accent)" stroke-width="3" fill="transparent" r="22" cx="25" cy="25"/>
+        </svg>
+        <div class="arrow-up">⇧</div>
+    </div>
+
+    <!-- Full Screen Game Modal -->
+    <div id="gameModal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <span class="close-btn" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Game Image">
+                <div class="modal-details">
+                    <h2 id="modalTitle">Game Title</h2>
+                    <h4 id="modalType" class="text-accent">Type</h4>
+                    <p id="modalDesc">Description goes here.</p>
+                    <p id="modalSize" class="size">Size: </p>
+                    <button id="modalDownloadBtn" class="btn btn-filled modal-btn" data-t="modal-btn">Download Game (Hop Ad)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Canvas Animation -->
     <script>
         const canvas = document.getElementById('particlesCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
         let mouse = { x: null, y: null };
-
         function resize() {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.height = Math.max(window.innerHeight, document.body.offsetHeight);
         }
-        resize();
         window.addEventListener('resize', resize);
-
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.radius = Math.random() * 3 + 2;
+                this.vx = (Math.random() - 0.5) * 0.4;
+                this.vy = (Math.random() - 0.5) * 0.4;
+                this.radius = Math.random() * 2 + 1;
             }
             update() {
-                this.x += this.vx;
-                this.y += this.vy;
+                this.x += this.vx; this.y += this.vy;
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-                
                 if (mouse.x && mouse.y) {
                     const dx = mouse.x - this.x;
-                    const dy = mouse.y - this.y;
+                    const dy = (mouse.y + window.scrollY) - this.y; 
                     const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 150) {
-                        const force = (150 - dist) / 150;
+                    if (dist < 120) {
+                        const force = (120 - dist) / 120;
                         this.x -= dx * force * 0.02;
                         this.y -= dy * force * 0.02;
                     }
@@ -62,467 +385,35 @@
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(240, 240, 240, 0.6)';
+                ctx.fillStyle = 'rgba(230, 57, 70, 0.4)';
                 ctx.fill();
             }
         }
-
-        const particleCount = Math.min(80, Math.floor(window.innerWidth / 20));
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
-
-        function connectParticles() {
+        for (let i = 0; i < Math.min(60, window.innerWidth / 30); i++) particles.push(new Particle());
+        function connect() {
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 150) {
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(240, 240, 240, ${0.15 * (1 - distance / 150)})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
+                    const d = Math.sqrt(dx*dx + dy*dy);
+                    if (d < 100) {
+                        ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(230, 57, 70, ${0.1 * (1 - d / 100)})`; ctx.lineWidth = 0.5; ctx.stroke();
                     }
                 }
             }
         }
-
         function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            connectParticles();
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); }); connect();
             requestAnimationFrame(animate);
         }
-        animate();
-
-        document.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-        document.addEventListener('mouseleave', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
+        document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY - window.scrollY; });
+        document.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+        resize(); animate();
     </script>
-
-
-    <header>
-        <img src="assets/svg/logo.svg" alt="MusaabK99 logo" />
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#AboutMe">About</a></li>
-                <li><a href="#myworks">Works</a></li>
-                <li><a href="#contactMe">Contact</a></li>
-            </ul>
-        </nav>
     
-    </header>
-
-    <section class="hero">
-        <img class="arrow" src="assets/svg/arrow.svg" alt="arrow" />
-        <div class="heroSub">
-          <h1 class="name">Im koussai</h1>
-          <h1 class="title">SoftWare Engineer</h1>
-          <div class="heroBtns">
-            <a class="hireMe" href="#contactMe">Hire me</a>
-            <a class="cv" href="assets/CV.pdf" download>Download CV
-              <img src="assets/svg/download.svg" alt="download button"
-            /></a>
-          </div>
-        </div>
-        <img src="Gemini.png" alt="Gemini" class="Gemini" />
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section class="AboutMe" id="AboutMe">
-        <img 
-          src="v.png" style="width: 1000px;"
-          alt="AboutMe image"
-          class="AboutMeImg"
-        />  
-        <div class="textContainer">
-            <div class="textTitle">
-                <h1 class="koki">About</h1>
-                <h1 class="za3im">me</h1>
-                <img src="assets/svg/lightbulb.svg" alt="light" class="light" />
-            </div>
-            <p class="AboutMePar">
-                Hey, Im Koussai this is my first website, i hope you like it.
-            </p>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section class="works" id="myworks">
-        <div class="worksContainer">
-            <div class="projectTitle">
-             <h1 class="aboutName">My recent</h1>
-             <h1 class="aboutTitle">works</h1>
-            </div>
-            <ul>
-                <li>
-                    <a href="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://pastelink.net/z5bintfk')">
-                      <img src="downloa.jpg" alt="downloa">
-                    </a>
-                    <p class="card-text">Click here to Download FIFA 14 patch</p>
-
-                    <script>
-                        function openAdThenDownload(e, adLink,downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://youtu.be/4DzIxuyQPZE')">
-                        <img src="download.jpg" alt="download">
-                    </a>
-                    <p class="card-text">Click here to watch patch tutorial</p>
-                    
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://www.mediafire.com/file/uy2mwy7cy74a40w/Creation_Master_15_Ultimate.rar/file')">
-                        <img src="images.jpg" alt="images">
-                    </a>
-                    <p class="card-text">Click here to Download Creation Master 15</p>
-                    
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://pcgd.net/dRDXHWWA4ZdgY5t/file','https://pcgd.net/wtnrMsocDBGLcrD/file')">
-                        <img src="koussai.jpg" alt="images">
-                    </a>
-                    <p class="card-text">Click here to Download Resident Evil 6</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            }    
-                            else if (count == 2) {
-                                window.open(downloadLink, "_blank");
-                            }
-                            else if (count == 3) {
-                                window.open('https://pcgd.net/wtnrMsocDBGLcrD/file', "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://dl1.tlauncher.org/f.php?f=files%2FTLauncher-Installer-1.9.5.1.exe')">
-                        <img src="mama.jpg" alt="mama">
-                    </a>
-                    <p class="card-text">Click here to Download Minecraft Java PC</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://pcgd.net/vXYF9QmuScYGl1h/file')">
-                        <img src="appa.jpg" alt="appa">
-                    </a>
-                    <p class="card-text">Click here to Download Hollow Knight PC</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://pcgd.net/eMqlMR6ntoI9MFL/file')">
-                        <img src="baba.jpg" alt="baba">
-                    </a>
-                    <p class="card-text">Click here to Download GTA San Andreas PC</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://files.apkdlink.com/gtasanandreas/gtasanandreas-2.11.264.apk')">
-                        <img src="aaaa.jpg" alt="aaaa">
-                    </a>
-                    <p class="card-text">Click here to Download GTA San Andreas Android</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://files.apkdlink.com/minecraft/minecraft-minecraft-apk-latest-version-january-2026.apk')">
-                        <img src="apps.58378.14492077886571533.338a563a-86e7-47b1-b9dc-41cf411f5dcd.jpg" alt="apps">
-                    </a>
-                    <p class="card-text">Click here to Download Minecraft Android</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://cdn1.trashbytes.to/Cuphead.v1.3.4.7z?verify=1774875017-puHx7mqtBIIsK4Yr9NvgrQAg7bk0TOW7gG0KJXLoc8Y%3D')">
-                        <img src="head.png" alt="head">
-                    </a>
-                    <p class="card-text">Click here to Download Cuphead PC</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://cdn1.trashbytes.to/Forza.Horizon.5.v688.109.rar?verify=1774875267-2NT9CW%2Fkm0%2BnK2O9bLCZATwu2emN6CoCK3sMkh7oUvE%3D')">
-                        <img src="forza.jpg" alt="forza">
-                    </a>
-                    <p class="card-text">Click here to Download Forza Horizon 5 PC</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://dl.apkvision.org/dead-cells/Dead-Cells-v3.5.9-unlocked-apkvision.apk')">
-                        <img src="cells.jpg" alt="cells">
-                    </a>
-                    <p class="card-text">Click here to Download Dead Cells Android</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://cdn1.trashbytes.to/Resident.Evil.4.2005.v1.1.0.rar?verify=1774875812-UwhEbp0hAvbjLFiMTAAwzg2kQ0jpibVIvtiFEo6YowE%3D')">
-                        <img src="evl 4.jpg" alt="evl">
-                    </a>
-                    <p class="card-text">Click here to Download Resident Evil 4</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://apks.trulhost.com/HollowKnight-1.5.78.apk')">
-                        <img src="knight.jpg" alt="knight">
-                    </a>
-                    <p class="card-text">Click here to Download Hollow Knight Android</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-                <li>
-                    <a herf="#" onclick="openAdThenDownload(event,'https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02','https://cdn1.trashbytes.to/JoJos.Bizarre.Adventure.ASBR.v2.3.3.rar?verify=1774875619-SmBRE%2FcQ2Zr4R8YrLtq2iFIb2LU4rwYsL%2FLqYbFmYaA%3D')">
-                        <img src="kok.jpg" alt="kok">
-                    </a>
-                    <p class="card-text">Click here to Download JoJo's Bizarre Adventure</p>
-                
-                    <script>
-                        function openAdThenDownload(e, adLink, downloadLink) {
-                            e.preventDefault();
-                            let count = localStorage.getItem("clickCount") || 0;
-                            count++;
-                            if (count == 1) {
-                                window.open(adLink, "_blank");
-                            } else {
-                                window.open(downloadLink, "_blank");
-                                count = 0;
-                            }
-                            localStorage.setItem("clickCount", count);
-                        }
-                    </script>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section class="contactContainer" id="contactMe">
-        <div class="contactTitle">
-            <h1 class="aboutName">Contact</h1>
-            <h1 class="aboutTitle">me</h1>
-        </div>
-        <div class="contact">
-            <div class="emailAndPhone">
-                <img src="assets/svg/Email.svg" alt="email logo" />
-                <a href="mailto:zzzzzzzz3129@gmail,com"
-                  ><h3>zzzzzzzz3129@gmail.com</h3></a
-                >
-            </div>
-            <div class="emailAndPhone">
-               <img src="assets/svg/phone.svg" alt="phone logo" />
-               <h3>+0541675366</h3>
-            </div>
-        </div>
-        <div class="socialMedia">
-            <a
-              href="https://www.instagram.com/mk_99_99_99/?utm_source=ig_web_button_share_sheet"
-              target="_blank"
-              ><img src="instagrame.png" alt="my instagram account"
-            /></a>
-        </div>
-    </section>
-
-    <footer>
-        <p>Built by MK.</p>
-    </footer>
-
+    <!-- Main Logistics script -->
+    <script src="main.js"></script>
 </body>
 </html>
