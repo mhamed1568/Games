@@ -1208,3 +1208,54 @@ body.rtl .close-btn {
         display: none !important;
     }
 }
+
+.works-section {
+    position: relative;
+    z-index: 1;
+    background: var(--sec-works);
+    min-height: 100vh;
+    overflow: visible !important;
+}
+
+.game-card,
+.game-item,
+.games-container {
+    position: relative;
+    z-index: 10 !important;
+    display: block;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .works-section,
+    #works {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        min-height: 100vh !important;
+    }
+
+    .container.reveal,
+    .works-grid,
+    .work-item {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .work-item {
+        width: 90% !important;
+        margin: 15px auto !important;
+        position: relative !important;
+    }
+
+    .work-img-wrapper, .work-img{
+        width: 100% !important;
+        height: auto !important;
+        min-height: 150px;
+    }
+}
