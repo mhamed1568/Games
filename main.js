@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'g_dash': { title: "Geometry Dash PC", type: "PC Game", desc: "Jump to the beat!", size: "300 MB", links: ['https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02', 'https://cdn1.trashbytes.to/Geometry.Dash.v2.208.7z?verify=1774970482-ZoSDUCTzAm7XhVZ2TQaTqGE5bxFSx8r6LW0BjfbOcQY%3D'] },
         'g_cs': { title: "Counter Strike 1.6 PC", type: "PC Game", desc: "Stick together team!", size: "400 MB", links: ['https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02', 'https://cdn1.trashbytes.to/Counter.Strike.v1.6.7z?verify=1774970629-2k2aVhiduHiJUnHNDAYG%2Fx7UGYcqp93T19iwSLSOzyA%3D'] },
         'g_last': { title: "Outlast PC", type: "PC Game", desc: "Run for your life!", size: "5 GB", links: ['https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02', 'https://cdn1.trashbytes.to/Outlast.v1.0.12046.rar?verify=1774975006-4ZAdRS4BIQYzV63wQ3m%2Fs0dMi6u67%2FRQc7UBCjJq%2BN0%3D'] },
-        'g_tall': { title: "Hytale PC", type: "PC Game", desc: "Creat your own destiny", size: "1.5 GB", links: ['https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02', 'https://cdn1.trashbytes.to/Hytale.v012426.7z?verify=1774974881-hbxIqTtgLYtPkv2n0u4Z%2FrcvFooV8rywMqMIsKVDAsk%3D'] },
+        'g_tall': { title: "Hytale PC", type: "PC Game", desc: "Creat your own destiny", size: "1.5 GB", links: ['https://www.profitablecpmratenetwork.com/prda3iip?key=2dd5e5e077903b5b2cf9300b900e7b02', 'https://cdn1.trashbytes.to/Hytale.v012426.7z?verify=1774974881-hbxIqTtgLYtPkv2n0u4Z%2FrcvFooV8rywMqMIsKVDAsk%3D'] }
     };
 
     const modal = document.getElementById('gameModal');
